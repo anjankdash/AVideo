@@ -36,9 +36,9 @@ WORKDIR /var/www/avideo
 
 # Set Permision
 # Create folder if not exists
-RUN mkdir /var/www/avideo/videos
+RUN mkdir -p /var/www/avideo/videos
 RUN chown www-data:www-data /var/www/avideo/videos && chmod 755 /var/www/avideo/videos
-#VOLUME [ "/storage/data" ]
+# VOLUME [ "/storage/data" ]
 
 # Manually set up the apache environment variables
 ENV APACHE_RUN_USER www-data
